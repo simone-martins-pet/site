@@ -1,129 +1,89 @@
-# 🐾 Landing Page – Simone Martins | Pet Sitter
+# 🐶🐱 Site Oficial – Simone Martins | Pet Sitter
 
-Este repositório contém o código-fonte da **landing page oficial de Simone Martins**, profissional de **Pet Sitter**, desenvolvida em **HTML, CSS e JavaScript puro**, otimizada para **GitHub Pages**, com foco em **performance, segurança, confiança e conversão**.
+Bem-vindo(a)!  
+Este site foi criado para apresentar de forma clara, segura e profissional os serviços de **Pet Sitter da Simone Martins**.
 
-O site apresenta de forma clara os serviços de **atendimento domiciliar para pets**, reforçando valores como carinho, responsabilidade e tranquilidade para os tutores.
-
----
-
-## 🎯 Objetivo do projeto
-
-Criar uma landing page:
-- Profissional, acolhedora e confiável
-- Leve, rápida e acessível
-- Segura para hospedagem pública
-- Fácil de manter e evoluir
-- Otimizada para conversão (contato via WhatsApp)
+Aqui você encontra informações sobre o atendimento, a forma de trabalho e os valores que guiam o cuidado com cada pet: **carinho, responsabilidade, atenção e confiança**.
 
 ---
 
-## 🧱 Tecnologias utilizadas
+## 💛 Sobre o serviço
 
-- **HTML5** – Estrutura semântica e acessível  
-- **CSS3 / Tailwind via CDN** – Estilização moderna e responsiva  
-- **JavaScript Vanilla** – Interações, animações e efeitos leves  
-- **GitHub Pages** – Hospedagem estática segura  
+O serviço de **Pet Sitter** é realizado **no conforto do lar do pet**, respeitando sua rotina, alimentação, hábitos e bem-estar.
 
-> ❌ Nenhum backend  
-> ❌ Nenhum banco de dados  
-> ❌ Nenhuma coleta de dados do usuário  
+É uma opção ideal para:
+- Tutores que vão viajar
+- Pessoas que passam o dia fora
+- Pets que não se adaptam bem a hotéis ou creches
 
----
-
-## 📁 Estrutura de pastas
-
-```
-/
-├── index.html
-├── img/
-│   └── gato-e-cachorro-felizes.webp
-└── README.md
-```
-
-### Convenções adotadas
-- Pastas e arquivos em **minúsculas**
-- Nomes descritivos
-- Formato de imagem **WebP** (mais leve)
+Cada atendimento é feito com atenção individual, priorizando a segurança e o bem-estar do animal.
 
 ---
 
-## 🎨 Design e Experiência do Usuário (UX)
+## 🌐 Acesso ao site
 
-- Layout responsivo (mobile-first)
-- Seção Hero com CTA claro
-- Serviços focados em Pet Sitter domiciliar
-- Depoimentos com prova social
-- Cores dinâmicas por dia da semana
-- Animações sutis e não intrusivas
+O site está disponível no endereço:
 
----
+👉 **simone-martins-pet.github.io/site**
 
-## 🎉 Efeitos por data comemorativa
-
-O site possui **efeitos automáticos ativados por data**, sem impacto de performance:
-
-| Data | Efeito |
-|----|----|
-| 25/12 | ❄ Flocos de neve (Natal) |
-| 01/01 | 🎉 Confetes (Ano Novo) |
-| Páscoa | 🥚 Ovinhos |
-| 31/10 | 🎃 Abóboras (Halloween) |
-
-> Os efeitos só são carregados na data correspondente.
+Ele pode ser acessado pelo celular, tablet ou computador.
 
 ---
 
-## 🔐 Segurança
+## 📱 Contato
 
-Este projeto segue boas práticas para sites estáticos:
+O principal canal de contato é o **WhatsApp**, facilitando a comunicação rápida e direta.
 
-### ✔ Medidas aplicadas
-- Content Security Policy (CSP)
-- HTTPS (GitHub Pages)
-- Nenhum input de usuário
-- Nenhum script externo desconhecido
-- Nenhum dado sensível no código
-
-### CSP utilizada
-```html
-<meta http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; object-src 'none';">
-```
+No site você encontra:
+- Botão direto para contato
+- Informações claras sobre o serviço
+- Depoimentos de clientes
+- Mensagens de orientação
 
 ---
 
-## 🚀 Publicação
+## 🎨 Experiência e cuidado
 
-URL:
-https://simone-martins-pet.github.io/site
+O site foi pensado para ser:
+- Simples e fácil de navegar
+- Leve e rápido
+- Visualmente acolhedor
+- Claro nas informações
 
----
-
-## 👨‍💻 Autoria, Governança e Uso de Inteligência Artificial
-
-Este site foi desenvolvido por **Jardel Santos**, com o uso de **Inteligência Artificial como ferramenta de apoio**, em conformidade com a política de uso responsável de IA adotada para o projeto.
-
-A Inteligência Artificial é utilizada de forma **ética, controlada e supervisionada**, com o objetivo de apoiar a melhoria contínua do site, sem substituição da tomada de decisão humana.
-
-### Aplicações da IA neste projeto
-- Apoio à melhoria contínua da experiência do usuário (UX/UI)
-- Refinamento e clareza dos conteúdos textuais
-- Sugestões de otimização de código, organização e performance
-- Apoio na aplicação de boas práticas de segurança para sites estáticos
-- Suporte à manutenção evolutiva e ajustes incrementais
-
-### Princípios adotados
-- **Supervisão humana obrigatória** sobre todas as decisões finais
-- **Não utilização de IA para coleta, processamento ou armazenamento de dados pessoais**
-- **Nenhuma automação sensível sem validação manual**
-- **Transparência** quanto ao uso de IA como ferramenta de apoio
-- **Conformidade com boas práticas de segurança, privacidade e ética digital**
-
-A Inteligência Artificial neste projeto atua como um **instrumento de apoio técnico e estratégico**, contribuindo para qualidade, consistência e evolução contínua do site, sempre respeitando os limites definidos pela política de uso de IA e pelas responsabilidades do desenvolvedor.
+Além disso, o site pode apresentar **elementos visuais especiais em datas comemorativas**, tornando a experiência mais agradável e humana.
 
 ---
 
-## 📄 Licença
+## 🔐 Segurança e privacidade
 
-Este projeto é de uso exclusivo da profissional Simone Martins.
-Conteúdo e layout não devem ser reproduzidos sem autorização.
+✔ O site **não coleta dados pessoais**  
+✔ Não possui formulários ou cadastros  
+✔ Não armazena informações dos visitantes  
+✔ O contato acontece apenas por iniciativa do cliente  
+
+Toda a navegação é feita em ambiente seguro.
+
+---
+
+## 🤖 Uso responsável de Inteligência Artificial
+
+O site foi desenvolvido com apoio de **Inteligência Artificial**, utilizada como **ferramenta de apoio criativo e técnico**, sempre com supervisão humana.
+
+A IA contribui para:
+- Clareza das informações
+- Organização do conteúdo
+- Melhoria contínua do site
+- Experiência mais agradável para o visitante
+
+Nenhuma decisão importante é tomada automaticamente, e **nenhuma informação pessoal é processada por IA**.
+
+---
+
+## ✨ Compromisso
+
+Este site reflete o compromisso da Simone Martins em oferecer um serviço de **Pet Sitter confiável, humano e responsável**, cuidando de cada pet com o respeito e o carinho que ele merece.
+
+---
+
+© Simone Martins – Pet Sitter  
+Todos os direitos reservados.
