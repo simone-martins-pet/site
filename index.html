@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pet Sitter | Simone Martins</title>
+
+    <meta name="description" content="Pet Sitter com atendimento domiciliar. Cuidados personalizados e carinho para seu pet. Agende pelo WhatsApp.">
+
+    <meta name="robots" content="index, follow">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+	<style>
+		:root {
+			--bg-body: #E5E7EB;
+			--hero-from: #FB923C;
+			--hero-to: #F97316;
+			--offwhite: #f8f9fa; /* tom off-white */
+		}
+		body {
+			font-family: 'Open Sans', sans-serif;
+			background: var(--bg-body);
+			transition: background 0.8s ease;
+		}
+
+		h1, h2, h3 {
+			font-family: 'Montserrat', sans-serif;
+		}
+		.effect-item {
+			position: fixed;
+			top: -20px;
+			pointer-events: none;
+			z-index: 9999;
+			animation: fall linear infinite;
+			opacity: 0.8;
+		}
+		.snowflake {
+			position: fixed;
+			top: -20px;
+			color: white;
+			font-size: 1em;
+			pointer-events: none;
+			z-index: 9999;
+			animation: fall linear infinite;
+			opacity: 0.8;
+		}
+		@keyframes fall {
+			to {
+				transform: translateY(110vh) rotate(360deg);
+			}
+		}
+
+	</style>
+
+    <!-- SEO Local -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Simone Martins - Pet Sitter",
+      "telephone": "+5521972045256",
+      "description": "Hospedagem, banho em casa e visitas com cuidados especiais para cães e gatos.",
+      "sameAs": ["https://wa.me/5521972045256"]
+    }
+    </script>
+</head>
+
+<body class="min-h-screen text-gray-800 scroll-smooth">
+
+<!-- HEADER -->
+<header class="fixed top-0 w-full bg-white/90 backdrop-blur shadow z-50">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
+        <span class="font-extrabold text-orange-500 text-lg">
+            🐾 Simone Martins
+        </span>
+
+        <a href="https://wa.me/5521972045256"
+           class="hidden md:inline bg-green-500 hover:bg-green-600 transition text-white px-5 py-2 rounded-full text-sm font-bold">
+            WhatsApp
+        </a>
+    </div>
+</header>
+
+<div class="h-16"></div>
+
+<!-- HERO -->
+<section class="relative"
+         style="background: linear-gradient(135deg, var(--hero-from), var(--hero-to));">
+    <div class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+
+        <div class="text-white">
+			<h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+				Pet Sitter no Grajaú (RJ)
+			</h1>
+			<p class="mt-4 text-lg text-gray-100">
+				Carinho, rotina e segurança para o seu pet — no horário que combina com vocês.
+			</p>
+			<p class="mt-2 text-base text-gray-200">
+				Atendemos também bairros vizinhos — consulte-nos!
+			</p>
+            <div class="mt-8">
+                <a href="https://wa.me/5521972045256"
+                   class="bg-green-500 hover:bg-green-600 transition text-white font-bold px-8 py-4 rounded-full shadow-xl inline-block">
+                    <i class="fab fa-whatsapp mr-2"></i> Agendar pelo WhatsApp
+                </a>
+            </div>
+        </div>
+
+
+
+        <div class="relative">
+			<img src="img/gato-e-cachorro-felizes.webp"
+				 alt="Cachorro e gato felizes juntos"
+				 loading="eager"
+				 class="rounded-3xl shadow-2xl object-cover w-full h-[420px]">
+				<div class="absolute inset-0 rounded-3xl bg-black/10"></div>
+        </div>
+    </div>
+</section>
+<!-- SERVIÇOS -->
+<section class="max-w-6xl mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold text-center mb-12">
+        Serviços oferecidos
+    </h2>
+    <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition">
+            <h3 class="font-bold text-orange-500 text-xl mb-2">🐾 Hospedagem domiciliar</h3>
+            <p class="text-gray-700 mb-4">Vai viajar? Seu pet fica com carinho, rotina mantida e atenção o tempo todo — com fotos e updates para você.</p>
+            <a href="https://wa.me/5521972045256" class="text-green-600 font-bold hover:underline">Reservar hospedagem</a>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition">
+            <h3 class="font-bold text-orange-500 text-xl mb-2">🛁 Banho em casa</h3>
+            <p class="text-gray-700 mb-4">Banho no conforto de casa, no horário que combina com a rotina do seu pet — limpo e tranquilo.</p>
+            <a href="https://wa.me/5521972045256" class="text-green-600 font-bold hover:underline">Agendar banho</a>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition">
+            <h3 class="font-bold text-orange-500 text-xl mb-2">🍽️ Visitas com cuidados especiais</h3>
+            <p class="text-gray-700 mb-4">Precisa de alguém de confiança para medicação, água e ração? Faço visitas com relatórios e horários combinados.</p>
+            <a href="https://wa.me/5521972045256" class="text-green-600 font-bold hover:underline">Agendar visita</a>
+        </div>
+    </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="max-w-6xl mx-auto px-6 py-10">
+    <h2 class="text-3xl font-bold text-center mb-12">
+        Por que escolher meu serviço?
+    </h2>
+	<div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition text-center">
+            <i class="fas fa-heart text-orange-500 text-3xl mb-4"></i>
+            <h3 class="font-bold mb-2">Amor e atenção</h3>
+            <p class="text-sm text-gray-600">Seu pet tratado como família, com rotina, brincadeiras e companhia de verdade.</p>
+        </div>
+		<div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition text-center">
+			<i class="fas fa-arrows-left-right text-orange-500 text-3xl mb-4"></i>
+			<h3 class="font-bold mb-2">Flexibilidade</h3>
+			<p class="text-sm text-gray-600">
+				Serviços ajustados à rotina do cliente e do pet — horários adaptáveis para maior conveniência.
+			</p>
+		</div>
+        <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition text-center">
+            <i class="fas fa-home text-orange-500 text-3xl mb-4"></i>
+            <h3 class="font-bold mb-2">Ambiente familiar</h3>
+			<p class="text-sm text-gray-600">Zero estresse de hotel: aconchego, silêncio e segurança, como em casa.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-gray-900 text-white py-20 text-center">
+    <h2 class="text-3xl font-bold mb-4">
+        Pronto para cuidar melhor do seu pet?
+    </h2>
+	<p class="text-gray-300 mb-8">
+		Atendimento sob agendamento • Vagas limitadas para manter qualidade
+	</p>
+    <a href="https://wa.me/5521972045256"
+       class="bg-green-500 hover:bg-green-600 transition text-white font-bold px-10 py-4 rounded-full shadow-2xl">
+        <i class="fab fa-whatsapp mr-2"></i> Falar agora no WhatsApp
+    </a>
+</section>
+
+<footer class="bg-black text-gray-400 text-center py-6 text-sm">
+  © 2025 • Simone Martins • Pet Sitter <br>
+  📍 Atendimento no Grajaú e bairros vizinhos — consulte-nos
+</footer>
+
+
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5521972045256"
+   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 transition text-white w-16 h-16 flex items-center justify-center rounded-full shadow-2xl z-50">
+    <i class="fab fa-whatsapp text-3xl"></i>
+</a>
+
+<!-- 🎨 SCRIPT DE COR POR DIA -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const temasPorDia = {
+        0: { // Domingo
+            body: "linear-gradient(135deg, #FEF3C7, #FDE68A)",
+            heroFrom: "#FDE68A",
+            heroTo: "#F59E0B"
+        },
+        1: { // Segunda
+            body: "#E5E7EB",
+            heroFrom: "#D1D5DB",
+            heroTo: "#9CA3AF"
+        },
+        2: { // Terça
+            body: "#DCFCE7",
+            heroFrom: "#86EFAC",
+            heroTo: "#22C55E"
+        },
+        3: { // Quarta
+            body: "#E0F2FE",
+            heroFrom: "#7DD3FC",
+            heroTo: "#38BDF8"
+        },
+        4: { // Quinta
+            body: "#F3E8FF",
+            heroFrom: "#C4B5FD",
+            heroTo: "#8B5CF6"
+        },
+        5: { // Sexta 🎉
+            body: "linear-gradient(135deg, #FFE4E6, #FBCFE8)",
+            heroFrom: "#FB7185",
+            heroTo: "#EC4899"
+        },
+        6: { // Sábado
+            body: "#FEF9C3",
+            heroFrom: "#FDE047",
+            heroTo: "#EAB308"
+        }
+    };
+
+    const hoje = new Date().getDay();
+    const tema = temasPorDia[hoje];
+
+    document.documentElement.style.setProperty("--bg-body", tema.body);
+    document.documentElement.style.setProperty("--hero-from", tema.heroFrom);
+    document.documentElement.style.setProperty("--hero-to", tema.heroTo);
+
+    if (hoje === 5) {
+        console.log("🐾 Sexta Pet Feliz ativada!");
+    }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const hoje = new Date();
+    const dia = hoje.getDate();
+    const mes = hoje.getMonth() + 1;
+
+    /* ==========================
+       DATAS COMEMORATIVAS
+    ========================== */
+
+    // 🎄 Natal - 25/12
+    if (dia === 25 && mes === 12) {
+        iniciarEfeito("❄", 50);
+    }
+
+    // 🎉 Ano Novo - 31/12
+    if (dia === 1 && mes === 1) {
+        iniciarEfeito("🎉", 45);
+        document.body.style.backgroundImage +=
+            ", linear-gradient(135deg, #FEF3C7, #FDE68A)";
+    }
+
+    // 🐰 Páscoa (ajuste a data conforme o ano)
+    // Exemplo: 31/03
+    if (dia === 31 && mes === 3) {
+        iniciarEfeito("🥚", 40);
+        document.body.style.backgroundImage +=
+            ", linear-gradient(135deg, #ECFEFF, #FDF4FF)";
+    }
+
+    // 🎃 Halloween - 31/10
+    if (dia === 31 && mes === 10) {
+        iniciarEfeito("🎃", 40);
+        document.body.style.backgroundImage +=
+            ", linear-gradient(135deg, #1F2937, #7C2D12)";
+    }
+
+    /* ==========================
+       FUNÇÃO BASE
+    ========================== */
+	
+	function iniciarEfeito(emoji, quantidade) {
+		for (let i = 0; i < quantidade; i++) {
+			const item = document.createElement("div");
+
+			// Se for neve, usa a classe snowflake
+			if (emoji === "❄") {
+				item.classList.add("snowflake");
+			} else {
+				item.classList.add("effect-item");
+			}
+
+			item.innerHTML = emoji;
+			item.style.left = Math.random() * 100 + "vw";
+			item.style.fontSize = (Math.random() * 14 + 10) + "px";
+			item.style.animationDuration = (Math.random() * 5 + 6) + "s";
+			item.style.opacity = Math.random();
+
+			document.body.appendChild(item);
+		}
+	}
+});
+</script>
+<script>
+let index = 0;
+const carousel = document.getElementById("carousel");
+const totalSlides = carousel.children.length;
+
+setInterval(() => {
+    index = (index + 1) % totalSlides;
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+}, 5000);
+</script>
+
+
+</body>
+</html>
