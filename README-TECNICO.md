@@ -38,6 +38,7 @@ Criar uma landing page:
 ├── img/
 │   └── gato-e-cachorro-felizes.webp
 └── README.md
+└── README-TECNICO.md
 ```
 
 ### Convenções adotadas
