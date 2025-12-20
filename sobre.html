@@ -42,13 +42,10 @@
 <body class="min-h-screen text-gray-800 scroll-smooth">
 
   <!-- HEADER -->
-  <header id="mainHeader"
-    class="fixed top-0 w-full bg-white/90 backdrop-blur shadow transition-all duration-300 z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-
-      <span class="font-extrabold text-orange-500 text-lg">
-        🐾 Simone Martins
-      </span>
+<header id="mainHeader"
+  class="fixed top-0 w-full bg-white/90 backdrop-blur shadow transition-all duration-300 z-50">
+  <div class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
+    <span class="font-extrabold text-orange-500 text-lg">🐾 Simone Martins</span>
 
 <!-- BOTÃO HOME -->
 	<a href="index.html"
@@ -103,28 +100,18 @@
     </section>
   </main>
 
-  <!-- WHATSAPP FLUTUANTE -->
-  <a href="https://wa.me/5521972045256"
-     aria-label="Falar com Simone no WhatsApp"
-     class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 transition text-white w-16 h-16 flex items-center justify-center rounded-full shadow-2xl z-50">
-    <svg xmlns="http://www.w3.org/2000/svg"
-         viewBox="0 0 32 32"
-         class="w-8 h-8 fill-white">
-      <path d="M16.001 3C9.373 3 4 8.372 4 15c0 2.634.86 5.063 2.313 7.033L4 29l7.146-2.262A11.94 11.94 0 0 0 16.001 27C22.628 27 28 21.628 28 15S22.628 3 16.001 3zm6.676 17.385c-.283.797-1.632 1.52-2.247 1.597-.576.073-1.306.103-2.11-.13-.486-.145-1.11-.358-1.92-.706-3.38-1.46-5.584-4.987-5.754-5.217-.17-.23-1.38-1.837-1.38-3.503 0-1.666.87-2.487 1.178-2.825.307-.338.67-.422.892-.422.222 0 .445.002.64.012.207.01.484-.08.758.578.283.68.964 2.34 1.05 2.51.086.17.144.368.03.598-.114.23-.17.368-.337.568-.17.2-.358.446-.512.598-.17.17-.347.356-.15.706.196.35.87 1.44 1.87 2.332 1.285 1.147 2.367 1.503 2.716 1.67.35.17.554.145.76-.085.207-.23.87-1.01 1.1-1.356.23-.346.46-.287.77-.17.31.114 1.96.925 2.295 1.095.336.17.56.255.645.398.086.143.086.82-.197 1.618z"/>
-    </svg>
-  </a>
-
-<!-- SCRIPT CORES POR DIA -->
+<!-- 🎨 SCRIPT DE CORES POR DIA (IGUAL AO INDEX) -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+
   const temasPorDia = {
-    0: { body: "linear-gradient(135deg, #FEF3C7, #FDE68A)", heroTo: "#F59E0B" },
-    1: { body: "#E5E7EB", heroTo: "#9CA3AF" },
-    2: { body: "#DCFCE7", heroTo: "#22C55E" },
-    3: { body: "#E0F2FE", heroTo: "#38BDF8" },
-    4: { body: "#F3E8FF", heroTo: "#8B5CF6" },
-    5: { body: "linear-gradient(135deg, #FFE4E6, #FBCFE8)", heroTo: "#EC4899" },
-    6: { body: "#FEF9C3", heroTo: "#EAB308" }
+    0: { body: "linear-gradient(135deg, #FEF3C7, #FDE68A)", heroFrom: "#FDE68A", heroTo: "#F59E0B" },
+    1: { body: "linear-gradient(135deg, #E5E7EB, #D1D5DB)", heroFrom: "#D1D5DB", heroTo: "#9CA3AF" },
+    2: { body: "linear-gradient(135deg, #DCFCE7, #86EFAC)", heroFrom: "#86EFAC", heroTo: "#22C55E" },
+    3: { body: "linear-gradient(135deg, #E0F2FE, #7DD3FC)", heroFrom: "#7DD3FC", heroTo: "#38BDF8" },
+    4: { body: "linear-gradient(135deg, #F3E8FF, #C4B5FD)", heroFrom: "#C4B5FD", heroTo: "#8B5CF6" },
+    5: { body: "linear-gradient(135deg, #FFE4E6, #FBCFE8)", heroFrom: "#FB7185", heroTo: "#EC4899" },
+    6: { body: "linear-gradient(135deg, #FEF9C3, #FDE047)", heroFrom: "#FDE047", heroTo: "#EAB308" }
   };
 
   //const hoje = new Date().getDay();
@@ -132,8 +119,35 @@ document.addEventListener("DOMContentLoaded", () => {
   const tema = temasPorDia[hoje];
 
   document.documentElement.style.setProperty("--bg-body", tema.body);
+  document.documentElement.style.setProperty("--hero-from", tema.heroFrom);
   document.documentElement.style.setProperty("--hero-to", tema.heroTo);
+
 });
+</script>
+
+<script>
+  const isHome = location.pathname.endsWith("index.html") || location.pathname === "/" || location.pathname.endsWith("/site/");
+
+  if (isHome) {
+    const homeBtn = document.querySelector('a[aria-label="Página inicial"]');
+    if (homeBtn) {
+      homeBtn.classList.add("bg-gray-200", "pointer-events-none");
+    }
+  }
+</script>
+
+<script>
+  const header = document.getElementById("mainHeader");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 60) {
+      header.classList.add("py-2", "shadow-lg");
+      header.classList.remove("py-4");
+    } else {
+      header.classList.add("py-4");
+      header.classList.remove("py-2", "shadow-lg");
+    }
+  });
 </script>
 
 </body>
