@@ -21,45 +21,46 @@
 
 	<style>
 		:root {
-			--bg-body: #E5E7EB;
-			--hero-from: #FB923C;
-			--hero-to: #F97316;
-			--offwhite: #f8f9fa; /* tom off-white */
+		  --bg-body: #E5E7EB;
+		  --hero-from: #FB923C;
+		  --hero-to: #F97316;
+		  --offwhite: #f8f9fa;
 		}
+
 		body {
-			font-family: 'Open Sans', sans-serif;
-			background: var(--bg-body);
-			transition: background 0.8s ease;
+		  font-family: 'Open Sans', sans-serif;
+		  background-image: var(--bg-body);
+		  background-repeat: no-repeat;
+		  background-attachment: fixed;
+		  background-size: cover;
+		  transition: background-image 0.8s ease;
 		}
 
 		h1, h2, h3 {
-			font-family: 'Montserrat', sans-serif;
-		}
-		.effect-item {
-			position: fixed;
-			top: -20px;
-			pointer-events: none;
-			z-index: 9999;
-			animation: fall linear infinite;
-			opacity: 0.8;
-		}
-		.snowflake {
-			position: fixed;
-			top: -20px;
-			color: white;
-			font-size: 1em;
-			pointer-events: none;
-			z-index: 9999;
-			animation: fall linear infinite;
-			opacity: 0.8;
-		}
-		@keyframes fall {
-			to {
-				transform: translateY(110vh) rotate(360deg);
-			}
+		  font-family: 'Montserrat', sans-serif;
 		}
 
-	</style>
+		.effect-item,
+		.snowflake {
+		  position: fixed;
+		  top: -20px;
+		  pointer-events: none;
+		  z-index: 9999;
+		  animation: fall linear infinite;
+		  opacity: 0.8;
+		}
+
+		.snowflake {
+		  color: white;
+		}
+
+		@keyframes fall {
+		  to {
+			transform: translateY(110vh) rotate(360deg);
+		  }
+		}
+</style>
+
 
     <!-- SEO Local -->
     <script type="application/ld+json">
@@ -77,7 +78,8 @@
 <body class="min-h-screen text-gray-800 scroll-smooth">
 
 <!-- HEADER -->
-<header class="fixed top-0 w-full bg-white/90 backdrop-blur shadow z-50">
+<header id="mainHeader"
+  class="fixed top-0 w-full bg-white/90 backdrop-blur shadow transition-all duration-300 z-50">
 <div class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
 
     <!-- LOGO / NOME -->
@@ -90,17 +92,34 @@
 
         <!-- MENU DROPDOWN -->
         <div class="relative">
-            <button id="menuBtn"
-                    class="font-semibold accent-color flex items-center gap-1">
-                Menu
-                <span>▾</span>
-            </button>
-
+		<!-- BOTÃO MENU -->
+			<button id="menuBtn"
+					aria-label="Abrir menu"
+					class="p-2 rounded-lg hover:bg-gray-100 transition">
+			  <svg xmlns="http://www.w3.org/2000/svg"
+				   class="w-6 h-6 text-gray-700"
+				   fill="none"
+				   viewBox="0 0 24 24"
+				   stroke="currentColor">
+				<path stroke-linecap="round"
+					  stroke-linejoin="round"
+					  stroke-width="2"
+					  d="M4 6h16M4 12h16M4 18h16" />
+			  </svg>
+			</button>
             <div id="menu"
                  class="hidden absolute right-0 mt-2 bg-white rounded-xl shadow-lg overflow-hidden min-w-[180px] z-50">
                 <a href="dicas.html"
                    class="block px-4 py-3 hover:bg-gray-100 transition">
                     🐾 Dicas para pets
+                </a>
+                <a href="faq.html"
+                   class="block px-4 py-3 hover:bg-gray-100 transition">
+                    🐾 FAQ
+                </a>
+                <a href="sobre.html"
+                   class="block px-4 py-3 hover:bg-gray-100 transition">
+                    🐾 Sobre
                 </a>
             </div>
         </div>
@@ -204,7 +223,7 @@
 <!-- CTA -->
 <section class="bg-gray-900 text-white py-10 text-center">
     <h2 class="text-3xl font-bold mb-4">
-        Pronto para cuidar melhor do seu pet?
+        Pronto para cuidar ainda melhor do seu pet?
     </h2>
 	<p class="text-gray-300 mb-8">
 		Atendimento sob agendamento • Vagas limitadas para manter qualidade
@@ -222,131 +241,61 @@
 </footer>
 
 
-<!-- WHATSAPP FLUTUANTE -->
-<a href="https://wa.me/5521972045256"
-   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 transition text-white w-16 h-16 flex items-center justify-center rounded-full shadow-2xl z-50">
-    <i class="fab fa-whatsapp text-3xl"></i>
-</a>
 
 <!-- 🎨 SCRIPT DE COR POR DIA -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
-    const temasPorDia = {
-        0: { // Domingo
-            body: "linear-gradient(135deg, #FEF3C7, #FDE68A)",
-            heroFrom: "#FDE68A",
-            heroTo: "#F59E0B"
-        },
-        1: { // Segunda
-            body: "#E5E7EB",
-            heroFrom: "#D1D5DB",
-            heroTo: "#9CA3AF"
-        },
-        2: { // Terça
-            body: "#DCFCE7",
-            heroFrom: "#86EFAC",
-            heroTo: "#22C55E"
-        },
-        3: { // Quarta
-            body: "#E0F2FE",
-            heroFrom: "#7DD3FC",
-            heroTo: "#38BDF8"
-        },
-        4: { // Quinta
-            body: "#F3E8FF",
-            heroFrom: "#C4B5FD",
-            heroTo: "#8B5CF6"
-        },
-        5: { // Sexta 🎉
-            body: "linear-gradient(135deg, #FFE4E6, #FBCFE8)",
-            heroFrom: "#FB7185",
-            heroTo: "#EC4899"
-        },
-        6: { // Sábado
-            body: "#FEF9C3",
-            heroFrom: "#FDE047",
-            heroTo: "#EAB308"
-        }
-    };
+  const temasPorDia = {
+    0: { body: "linear-gradient(135deg, #FEF3C7, #FDE68A)", heroFrom: "#FDE68A", heroTo: "#F59E0B" },
+    1: { body: "linear-gradient(135deg, #E5E7EB, #D1D5DB)", heroFrom: "#D1D5DB", heroTo: "#9CA3AF" },
+    2: { body: "linear-gradient(135deg, #DCFCE7, #86EFAC)", heroFrom: "#86EFAC", heroTo: "#22C55E" },
+    3: { body: "linear-gradient(135deg, #E0F2FE, #7DD3FC)", heroFrom: "#7DD3FC", heroTo: "#38BDF8" },
+    4: { body: "linear-gradient(135deg, #F3E8FF, #C4B5FD)", heroFrom: "#C4B5FD", heroTo: "#8B5CF6" },
+    5: { body: "linear-gradient(135deg, #FFE4E6, #FBCFE8)", heroFrom: "#FB7185", heroTo: "#EC4899" },
+    6: { body: "linear-gradient(135deg, #FEF9C3, #FDE047)", heroFrom: "#FDE047", heroTo: "#EAB308" }
+  };
 
-    const hoje = new Date().getDay();
-    const tema = temasPorDia[hoje];
+  //const hoje = new Date().getDay();
+  const hoje = 5; // Sexta
 
-    document.documentElement.style.setProperty("--bg-body", tema.body);
-    document.documentElement.style.setProperty("--hero-from", tema.heroFrom);
-    document.documentElement.style.setProperty("--hero-to", tema.heroTo);
+  const tema = temasPorDia[hoje];
 
-    if (hoje === 5) {
-        console.log("🐾 Sexta Pet Feliz ativada!");
-    }
+  document.documentElement.style.setProperty("--bg-body", tema.body);
+  document.documentElement.style.setProperty("--hero-from", tema.heroFrom);
+  document.documentElement.style.setProperty("--hero-to", tema.heroTo);
+
 });
 </script>
+
 <!-- SCRIPT DATAS COMEMORATIVAS -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
-    const hoje = new Date();
-    const dia = hoje.getDate();
-    const mes = hoje.getMonth() + 1;
+  const hoje = new Date();
+  const dia = hoje.getDate();
+  const mes = hoje.getMonth() + 1;
 
-    /* ==========================
-       DATAS COMEMORATIVAS
-    ========================== */
-
-    // 🎄 Natal - 25/12
-    if (dia === 25 && mes === 12) {
-        iniciarEfeito("❄", 50);
+  function iniciarEfeito(emoji, quantidade) {
+    for (let i = 0; i < quantidade; i++) {
+      const item = document.createElement("div");
+      item.className = emoji === "❄" ? "snowflake" : "effect-item";
+      item.textContent = emoji;
+      item.style.left = Math.random() * 100 + "vw";
+      item.style.fontSize = Math.random() * 14 + 12 + "px";
+      item.style.animationDuration = Math.random() * 5 + 6 + "s";
+      document.body.appendChild(item);
     }
+  }
 
-    // 🎉 Ano Novo - 31/12
-    if (dia === 1 && mes === 1) {
-        iniciarEfeito("🎉", 45);
-        document.body.style.backgroundImage +=
-            ", linear-gradient(135deg, #FEF3C7, #FDE68A)";
-    }
+  if (dia === 25 && mes === 12) iniciarEfeito("❄", 50);
+  if (dia === 1 && mes === 1) iniciarEfeito("🎉", 45);
+  if (dia === 31 && mes === 3) iniciarEfeito("🥚", 40);
+  if (dia === 31 && mes === 10) iniciarEfeito("🎃", 40);
 
-    // 🐰 Páscoa (ajuste a data conforme o ano)
-    // Exemplo: 31/03
-    if (dia === 31 && mes === 3) {
-        iniciarEfeito("🥚", 40);
-        document.body.style.backgroundImage +=
-            ", linear-gradient(135deg, #ECFEFF, #FDF4FF)";
-    }
-
-    // 🎃 Halloween - 31/10
-    if (dia === 31 && mes === 10) {
-        iniciarEfeito("🎃", 40);
-        document.body.style.backgroundImage +=
-            ", linear-gradient(135deg, #1F2937, #7C2D12)";
-    }
-
-    /* ==========================
-       FUNÇÃO BASE
-    ========================== */
-	
-	function iniciarEfeito(emoji, quantidade) {
-		for (let i = 0; i < quantidade; i++) {
-			const item = document.createElement("div");
-
-			// Se for neve, usa a classe snowflake
-			if (emoji === "❄") {
-				item.classList.add("snowflake");
-			} else {
-				item.classList.add("effect-item");
-			}
-
-			item.innerHTML = emoji;
-			item.style.left = Math.random() * 100 + "vw";
-			item.style.fontSize = (Math.random() * 14 + 10) + "px";
-			item.style.animationDuration = (Math.random() * 5 + 6) + "s";
-			item.style.opacity = Math.random();
-
-			document.body.appendChild(item);
-		}
-	}
 });
 </script>
+
 
 <!-- SCRIPT MENU -->
 <script>
@@ -374,6 +323,30 @@ setInterval(() => {
   });
 </script>
 
+<script>
+  const isHome = location.pathname.endsWith("index.html") || location.pathname === "/" || location.pathname.endsWith("/site/");
+
+  if (isHome) {
+    const homeBtn = document.querySelector('a[aria-label="Página inicial"]');
+    if (homeBtn) {
+      homeBtn.classList.add("bg-gray-200", "pointer-events-none");
+    }
+  }
+</script>
+
+<script>
+  const header = document.getElementById("mainHeader");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 60) {
+      header.classList.add("py-2", "shadow-lg");
+      header.classList.remove("py-4");
+    } else {
+      header.classList.add("py-4");
+      header.classList.remove("py-2", "shadow-lg");
+    }
+  });
+</script>
 
 </body>
 </html>
