@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre | Simone Martins Pet Sitter</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+
+  <!-- Estilos base e variáveis -->
+	<style>
+		:root {
+		  --bg-body: linear-gradient(135deg, #E5E7EB, #D1D5DB);
+		  --hero-from: #FB923C;
+		  --hero-to: #F97316;
+		}
+
+		body {
+		  font-family: 'Open Sans', sans-serif;
+		  background-image: var(--bg-body);
+		  background-repeat: no-repeat;
+		  background-attachment: fixed;
+		  background-size: cover;
+		  min-height: 100vh;
+		  transition: background-image 0.8s ease;
+		}
+
+		h1, h2 {
+		  font-family: 'Montserrat', sans-serif;
+		}
+	</style>
+</head>
+
+<body class="min-h-screen text-gray-800 scroll-smooth">
+
+  <!-- HEADER -->
+  <header id="mainHeader"
+    class="fixed top-0 w-full bg-white/90 backdrop-blur shadow transition-all duration-300 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <span class="font-extrabold text-orange-500 text-lg">
+        🐾 Simone Martins
+      </span>
+
+<!-- BOTÃO HOME -->
+	<a href="index.html"
+	   aria-label="Página inicial"
+	   title="Página inicial"
+	   class="group relative p-2 rounded-lg transition hover:bg-gray-100">
+
+	  <svg xmlns="http://www.w3.org/2000/svg"
+		   class="w-6 h-6 transition transform group-hover:scale-110"
+		   style="color: var(--hero-to);"
+		   fill="none"
+		   viewBox="0 0 24 24"
+		   stroke="currentColor">
+		<path stroke-linecap="round"
+			  stroke-linejoin="round"
+			  stroke-width="2"
+			  d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h5v-6h4v6h5a1 1 0 001-1V10" />
+	  </svg>
+
+	  <!-- TOOLTIP -->
+	  <span class="absolute -bottom-9 left-1/2 -translate-x-1/2 
+				   bg-gray-800 text-white text-xs px-2 py-1 rounded 
+				   opacity-0 group-hover:opacity-100 transition whitespace-nowrap">
+		Início
+	  </span>
+	</a>
+
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="flex items-center justify-center min-h-screen px-6 pt-24">
+    <section class="max-w-xl text-center bg-white rounded-3xl shadow-lg p-10">
+
+      <div class="text-6xl mb-6">🚧</div>
+
+      <h1 class="text-3xl font-extrabold mb-4"
+          style="color: var(--hero-to);">
+        Página em construção
+      </h1>
+
+      <p class="text-gray-600 text-lg leading-relaxed mb-6">
+        Estou preparando com muito carinho uma página especial para você
+        conhecer melhor minha história, meus valores e a forma como cuido
+        dos pets.
+      </p>
+
+      <p class="text-gray-500 mb-8">
+        Em breve, este espaço trará todas essas informações ✨
+      </p>
+
+    </section>
+  </main>
+
+  <!-- WHATSAPP FLUTUANTE -->
+  <a href="https://wa.me/5521972045256"
+     aria-label="Falar com Simone no WhatsApp"
+     class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 transition text-white w-16 h-16 flex items-center justify-center rounded-full shadow-2xl z-50">
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 32 32"
+         class="w-8 h-8 fill-white">
+      <path d="M16.001 3C9.373 3 4 8.372 4 15c0 2.634.86 5.063 2.313 7.033L4 29l7.146-2.262A11.94 11.94 0 0 0 16.001 27C22.628 27 28 21.628 28 15S22.628 3 16.001 3zm6.676 17.385c-.283.797-1.632 1.52-2.247 1.597-.576.073-1.306.103-2.11-.13-.486-.145-1.11-.358-1.92-.706-3.38-1.46-5.584-4.987-5.754-5.217-.17-.23-1.38-1.837-1.38-3.503 0-1.666.87-2.487 1.178-2.825.307-.338.67-.422.892-.422.222 0 .445.002.64.012.207.01.484-.08.758.578.283.68.964 2.34 1.05 2.51.086.17.144.368.03.598-.114.23-.17.368-.337.568-.17.2-.358.446-.512.598-.17.17-.347.356-.15.706.196.35.87 1.44 1.87 2.332 1.285 1.147 2.367 1.503 2.716 1.67.35.17.554.145.76-.085.207-.23.87-1.01 1.1-1.356.23-.346.46-.287.77-.17.31.114 1.96.925 2.295 1.095.336.17.56.255.645.398.086.143.086.82-.197 1.618z"/>
+    </svg>
+  </a>
+
+<!-- SCRIPT CORES POR DIA -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const temasPorDia = {
+    0: { body: "linear-gradient(135deg, #FEF3C7, #FDE68A)", heroTo: "#F59E0B" },
+    1: { body: "#E5E7EB", heroTo: "#9CA3AF" },
+    2: { body: "#DCFCE7", heroTo: "#22C55E" },
+    3: { body: "#E0F2FE", heroTo: "#38BDF8" },
+    4: { body: "#F3E8FF", heroTo: "#8B5CF6" },
+    5: { body: "linear-gradient(135deg, #FFE4E6, #FBCFE8)", heroTo: "#EC4899" },
+    6: { body: "#FEF9C3", heroTo: "#EAB308" }
+  };
+
+  //const hoje = new Date().getDay();
+  const hoje = 5; // Sexta
+  const tema = temasPorDia[hoje];
+
+  document.documentElement.style.setProperty("--bg-body", tema.body);
+  document.documentElement.style.setProperty("--hero-to", tema.heroTo);
+});
+</script>
+
+</body>
+</html>
